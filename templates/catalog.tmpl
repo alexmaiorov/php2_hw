@@ -1,0 +1,17 @@
+{% include 'head.tmpl' %}
+{% include 'header.tmpl' %}
+<section class = "main-products">
+    {% for product in dataProduct %}
+        <div class="main-products-item">
+            <a class="products-item-link" href="#">
+                <img src="{{product.small_img_url}}" alt="{{product.name}}" title="{{product.name}}" height="170">
+                <span class="item-name">{{product.name}}</span>
+                <span class="item-price">{{product.price}} &#8381;</span>
+            </a>
+        </div>
+    {% endfor %}
+</section>
+<button class="addCart-btn showMore" data-position="8" data-add="4" onclick="showMore(this)">Показать еще</button>
+<script src="js/main.js"></script>
+<script src="js/jquery.js"></script>
+{% include 'footer.tmpl' %}
